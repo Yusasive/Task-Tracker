@@ -44,21 +44,21 @@ const Read = () => {
       <input
         class="form-check-input"
         name="gender"
-        checked={radioData === "Male"}
-        value="Male"
+        checked={radioData === "Urgent"}
+        value="Urgent"
         type="radio"
         onChange={(e) => setRadioData(e.target.value)}
       />
-      <label class="form-check-label">Male</label>
+      <label class="form-check-label">Urgent</label>
       <input
         class="form-check-input"
         name="gender"
-        value="Female"
-        checked={radioData === "Female"}
+        value="Important"
+        checked={radioData === "Important"}
         type="radio"
         onChange={(e) => setRadioData(e.target.value)}
       />
-      <label class="form-check-label">Female</label>
+      <label class="form-check-label">Important</label>
 
       <div>
         {users &&
@@ -73,9 +73,9 @@ const Read = () => {
               }
             })
             .filter((ele) => {
-              if (radioData === "Male") {
+              if (radioData === "Urgent") {
                 return ele.gender === radioData;
-              } else if (radioData === "Female") {
+              } else if (radioData === "Important") {
                 return ele.gender === radioData;
               } else return ele;
             })

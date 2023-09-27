@@ -26,7 +26,7 @@ const Create = () => {
       <h2 className="my-2">Fill the data</h2>
       <form className="w-50 mx-auto my-5" onSubmit={handleSubmit}>
         <div class="mb-3">
-          <label class="form-label">Name</label>
+          <label class="form-label">Title</label>
           <input
             type="text"
             name="name"
@@ -36,9 +36,9 @@ const Create = () => {
           />
         </div>
         <div class="mb-3">
-          <label class="form-label">Email</label>
+          <label class="form-label">Description</label>
           <input
-            type="email"
+            type="text"
             name="email"
             class="form-control"
             onChange={getUserData}
@@ -46,9 +46,9 @@ const Create = () => {
           />
         </div>
         <div class="mb-3">
-          <label class="form-label">Age</label>
+          <label class="form-label">Deadline</label>
           <input
-            type="text"
+            type="date"
             name="age"
             class="form-control"
             onChange={getUserData}
@@ -59,22 +59,22 @@ const Create = () => {
           <input
             class="form-check-input"
             name="gender"
-            value="Male"
+            value="Urgent"
             type="radio"
             onChange={getUserData}
             required
           />
-          <label class="form-check-label">Male</label>
+          <label class="form-check-label">Urgent</label>
         </div>
         <div class="mb-3">
           <input
             class="form-check-input"
             name="gender"
-            value="Female"
+            value="Important"
             type="radio"
             onChange={getUserData}
           />
-          <label class="form-check-label">Female</label>
+          <label class="form-check-label">Important</label>
         </div>
 
         <button type="submit" class="btn btn-primary">
