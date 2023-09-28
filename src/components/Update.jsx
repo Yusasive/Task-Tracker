@@ -36,7 +36,7 @@ const Update = () => {
       <h2 className="my-2">Edit the data</h2>
       <form className="w-50 mx-auto my-5" onSubmit={handleUpdate}>
         <div class="mb-3">
-          <label class="form-label">Name</label>
+          <label class="form-label">Title</label>
           <input
             type="text"
             name="name"
@@ -46,7 +46,7 @@ const Update = () => {
           />
         </div>
         <div class="mb-3">
-          <label class="form-label">Email</label>
+          <label class="form-label">Description</label>
           <input
             type="email"
             name="email"
