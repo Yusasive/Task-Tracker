@@ -48,7 +48,7 @@ const Update = () => {
         <div class="mb-3">
           <label class="form-label">Description</label>
           <input
-            type="email"
+            type="text"
             name="email"
             class="form-control"
             value={updateData && updateData.email}
@@ -56,9 +56,9 @@ const Update = () => {
           />
         </div>
         <div class="mb-3">
-          <label class="form-label">Age</label>
+          <label class="form-label">Status</label>
           <input
-            type="text"
+            type="date"
             name="age"
             class="form-control"
             value={updateData && updateData.age}
@@ -69,23 +69,23 @@ const Update = () => {
           <input
             class="form-check-input"
             name="gender"
-            value="Male"
+            value="Urgent"
             type="radio"
             checked={updateData && updateData.gender === "Male"}
             onChange={newData}
           />
-          <label class="form-check-label">Male</label>
+          <label class="form-check-label">Urgent</label>
         </div>
         <div class="mb-3">
           <input
             class="form-check-input"
             name="gender"
-            value="Female"
+            value="Important"
             type="radio"
             checked={updateData && updateData.gender === "Female"}
             onChange={newData}
           />
-          <label class="form-check-label">Female</label>
+          <label class="form-check-label">Important</label>
         </div>
 
         <button type="submit" class="btn btn-primary">
