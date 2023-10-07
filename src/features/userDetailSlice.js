@@ -4,7 +4,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const createUser = createAsyncThunk(
   "createUser",
   async (data, { rejectWithValue }) => {
-    console.log("data", data);
     const response = await fetch(
       "https://65130c258e505cebc2e981a1.mockapi.io/task",
       {
@@ -35,7 +34,6 @@ export const showUser = createAsyncThunk(
 
     try {
       const result = await response.json();
-      console.log(result);
       return result;
     } catch (error) {
       return rejectWithValue(error);
@@ -52,8 +50,7 @@ export const deleteUser = createAsyncThunk(
     );
 
     try {
-      const result = await response.json();
-      console.log(result);
+      const result = await response.json()
       return result;
     } catch (error) {
       return rejectWithValue(error);
@@ -65,7 +62,6 @@ export const deleteUser = createAsyncThunk(
 export const updateUser = createAsyncThunk(
   "updateUser",
   async (data, { rejectWithValue }) => {
-    console.log("updated data", data);
     const response = await fetch(
       `https://65130c258e505cebc2e981a1.mockapi.io/task/${data.id}`,
       {
@@ -97,7 +93,6 @@ export const userDetail = createSlice({
 
   reducers: {
     searchUser: (state, action) => {
-      console.log(action.payload);
       state.searchData = action.payload;
     },
   },

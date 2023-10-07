@@ -23,7 +23,7 @@ const Update = () => {
     setUpdateData({ ...updateData, [e.target.name]: e.target.value });
   };
 
-  console.log("updated data", updateData);
+
 
   const handleUpdate = (e) => {
     e.preventDefault();
